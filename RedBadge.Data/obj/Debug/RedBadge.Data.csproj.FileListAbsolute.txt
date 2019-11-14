@@ -1,0 +1,16 @@
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\obj\Debug\RedBadge.Data.csprojAssemblyReference.cache
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\obj\Debug\RedBadge.Data.csproj.CoreCompileInputs.cache
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\RedBadge.Data.dll.config
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\RedBadge.Data.dll
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\RedBadge.Data.pdb
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\EntityFramework.dll
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\EntityFramework.xml
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\obj\Debug\RedBadge.Data.csproj.CopyComplete
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\obj\Debug\RedBadge.Data.dll
+C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadge.Data\obj\Debug\RedBadge.Data.pdb
