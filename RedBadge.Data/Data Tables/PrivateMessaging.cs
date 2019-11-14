@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RedBadge.Data
 {
-    class Calendar
+    class PrivateMessaging
     {
+      //Newby to decide propereties based on endpoints required 
     }
 }
