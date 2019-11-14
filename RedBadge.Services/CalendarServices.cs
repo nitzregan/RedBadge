@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RedBadge.Services
 {
-    class Calendar
+    public class CalendarServices
     {
     }
 }
