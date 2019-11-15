@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RedBadge.Services
 {
-    class ProfileService
+    public class ProfileService
     {
         public bool CreateProfile(ProfileCreate model)
         {
