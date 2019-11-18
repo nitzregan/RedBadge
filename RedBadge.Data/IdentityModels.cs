@@ -34,9 +34,10 @@ namespace RedBadgeProject.Data
             return new ApplicationDbContext();
         }
 
-        //public DbSet<Calendar> Calendar { get; set; }
-        //public DbSet<PrivateMessaging> PrivateMessaging { get; set; }
-        //public DbSet<Profile> Profile { get; set; }
+
+        public DbSet<Calendar> Calendar { get; set; }
+        public DbSet<PrivateMessaging> PrivateMessaging { get; set; }
+        public DbSet<Profile> Profile { get; set; }
         public DbSet<Team> Team { get; set; }
         public DbSet<TeamMessaging> TeamMessaging { get; set; }
 

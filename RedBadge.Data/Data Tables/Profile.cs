@@ -12,14 +12,14 @@ namespace RedBadge.Data
         [Key]
         public int ProfileID { get; set; }
         [Required]
-        public Guid UserId { get; set; }
+        public Guid UserID { get; set; }
         [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
         [Required]
         [Display(Name = "Late Name")]
         public string LastName { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string OtherInfo { get; set; }
@@ -28,3 +28,15 @@ namespace RedBadge.Data
         public DateTimeOffset? CreatedUtc { get; set; }
     }
 }
+
+//ProfileID
+//UserId
+//FirstName
+//LastName
+//Birthday
+//Email
+//PhoneNumber
+//OtherInfo
+//MyTeams
+//Comment
+//CreatedUtc

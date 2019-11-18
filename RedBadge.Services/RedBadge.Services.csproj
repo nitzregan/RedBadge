@@ -72,7 +72,7 @@
       <Name>RedBadge.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\RedBadge.Models\RedBadge.Models.csproj">
-      <Project>{0a5d47c6-2195-4159-ae15-5831e608e027}</Project>
+      <Project>{0A5D47C6-2195-4159-AE15-5831E608E027}</Project>
       <Name>RedBadge.Models</Name>
     </ProjectReference>
   </ItemGroup>

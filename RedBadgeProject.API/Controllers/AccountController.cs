@@ -13,6 +13,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
+using RedBadge.Models;
+using RedBadge.Services;
 using RedBadgeProject.API.Models;
 using RedBadgeProject.API.Providers;
 using RedBadgeProject.API.Results;
@@ -343,12 +345,13 @@ namespace RedBadgeProject.API.Controllers
                     if (result.Succeeded)
                     {
                         var result1 = UserManager.AddToRole(user.Id, "Parent");
-                        //service layer method call (using applictationdbcontext) -- ctx.parent.add(new parent {})
+                        //service layer method call (using applictationdbcontext) -- ctx.profile.add(new profile {})
+                        var service = new ProfileService(Guid.Parse(user.Id));
+                        var modelCreateProfile = service.CreateProfile(new ProfileCreate { UserID = Guid.Parse(user.Id) });
                     }
-                        return Ok();
+                    return Ok();
                 }
-                //check for child's username in db
-                //if child exists => continue to create user, then create parent profile
+                return BadRequest();
 
             }
             else
@@ -363,13 +366,17 @@ namespace RedBadgeProject.API.Controllers
                     if (model.Role == "Coach")
                     {
                         var result1 = UserManager.AddToRole(user.Id, "Coach");
-                        //service layer method call (using applictationdbcontext) -- ctx.coach.add(new coach {})
+                        var service = new ProfileService(Guid.Parse(user.Id));
+                        var modelCreateProfile = service.CreateProfile(new ProfileCreate { UserID = Guid.Parse(user.Id) });
+                        return Ok();
                     }
 
                     else if (model.Role == "Athlete")
                     {
                         var result1 = UserManager.AddToRole(user.Id, "Athlete");
-                        //service layer method call (using applictationdbcontext) -- ctx.athlete.add(new athlete {})
+                        var service = new ProfileService(Guid.Parse(user.Id));
+                        var modelCreateProfile = service.CreateProfile(new ProfileCreate {UserID = Guid.Parse(user.Id)});
+                        return Ok();
                     }
 
                     return Ok();
