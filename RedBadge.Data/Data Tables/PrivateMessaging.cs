@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RedBadge.Data
 {
-    class Profile
+    public class PrivateMessaging
     {
+        public string Comment { get; set; }
     }
 }

@@ -1,15 +1,15 @@
-﻿using RedBadge.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedBadge.Models
+namespace RedBadge.Data
 {
-    public class ProfileDetail
+    public class Profile
     {
+        [Key]
         public int ProfileID { get; set; }
         [Required]
         public Guid UserId { get; set; }

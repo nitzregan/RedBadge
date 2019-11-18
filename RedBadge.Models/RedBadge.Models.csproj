@@ -58,6 +58,10 @@
     <Compile Include="Calendar\CalendarDetail.cs" />
     <Compile Include="Calendar\CalendarEdit.cs" />
     <Compile Include="Calendar\CalendarListItem.cs" />
+    <Compile Include="Event\EventCreate.cs" />
+    <Compile Include="Event\EventDelete.cs" />
+    <Compile Include="Event\EventDetail.cs" />
+    <Compile Include="Event\EventEdit.cs" />
     <Compile Include="Private Messaging\PrivateMessagingCreate.cs" />
     <Compile Include="Private Messaging\PrivateMessagingDetail.cs" />
     <Compile Include="Private Messaging\PrivateMessagingEdit.cs" />
@@ -80,6 +84,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RedBadge.Data\RedBadge.Data.csproj">
+      <Project>{347CA885-2B2B-4C99-866D-CCA2CD0BAC24}</Project>
+      <Name>RedBadge.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
