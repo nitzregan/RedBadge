@@ -13,9 +13,6 @@ namespace RedBadge.Data
     {
         [Key]
         public int CalendarID { get; set; }
-
-        [ForeignKey("EventVariable")]
-        public int EventID { get; set; }
-        public virtual Event EventVariable { get; set; }
+        public ICollection<Event> TeamEvents { get; set; }
     }
 }
