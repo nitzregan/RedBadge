@@ -1,20 +1,18 @@
-﻿using RedBadge.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedBadge.Models
+namespace RedBadge.Data.Data_Tables
 {
-    public class EventEdit
+    public class Event
     {
+        [Key]
         public int EventID { get; set; }
-        public int CalendarID { get; set; }
         public string Title { get; set; }
-        public string Content { get; set; }
         public bool AllDayEvent { get; set; }
-        public Calendar CalendarVariable { get; set; }
         public DateTimeOffset Start { get; set; }
         public DateTimeOffset End { get; set; }
     }
