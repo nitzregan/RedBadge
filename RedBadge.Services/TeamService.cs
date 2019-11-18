@@ -24,6 +24,7 @@ namespace RedBadge.Services
                 new Team()
                 {
                     UserID = _userID,
+                    TeamID = model.TeamID,
                     TeamName = model.TeamName,
                     Roster = model.Roster,
                     TeamEvents = model.TeamEvents
@@ -47,6 +48,7 @@ namespace RedBadge.Services
                         e =>
                             new TeamListItem
                             {
+                                UserID = _userID,
                                 TeamID = e.TeamID,
                                 TeamName = e.TeamName,
                                 Roster = e.Roster,
@@ -68,6 +70,7 @@ namespace RedBadge.Services
                 return
                     new TeamDetail
                     {
+                        UserID = _userID,
                         TeamID = entity.TeamID,
                         TeamName = entity.TeamName,
                         Roster = entity.Roster,
