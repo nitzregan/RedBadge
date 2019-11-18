@@ -10,14 +10,15 @@ namespace RedBadge.Models
 {
     public class TeamMessagingEdit
     {
-        public int MessageID { get; set; }
         [Required]
+        public Guid UserID { get; set; }
+        [Key]
+        public int MessageID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public HttpPostedFileBase File { get; set; }
-        [Display(Name = "Date Created")]
+        public string FileName { get; set; }
+        public byte[] FileContent { get; set; }
         public DateTimeOffset? CreatedUtc { get; set; }
-        [Display(Name = "Date Modified")]
         public DateTimeOffset? Modifiedutc { get; set; }
     }
 }

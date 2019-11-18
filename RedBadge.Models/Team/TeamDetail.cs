@@ -1,4 +1,5 @@
 ﻿using RedBadge.Data;
+using RedBadge.Data.Data_Tables;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,15 +12,15 @@ namespace RedBadge.Models
 {
     public class TeamDetail
     {
-        public int TeamID { get; set; }
         [Required]
         public Guid UserID { get; set; }
-        [ForeignKey("CalendarVariable")]
-        public int CalendarID { get; set; }
-        public virtual Calendar CalendarVariable { get; set; }
+        [Key]
+        public int TeamID { get; set; }
         [Required]
         [Display(Name = "Team Name")]
         public string TeamName { get; set; }
         public ICollection<Profile> Roster { get; set; }
+        public ICollection<Event> TeamEvents { get; set; }
+
     }
 }

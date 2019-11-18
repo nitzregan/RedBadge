@@ -9,10 +9,10 @@ namespace RedBadge.Data
 {
     public class Profile
     {
-        [Key]
-        public int ProfileID { get; set; }
         [Required]
         public Guid UserID { get; set; }
+        [Key]
+        public int ProfileID { get; set; }
         [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
@@ -28,15 +28,3 @@ namespace RedBadge.Data
         public DateTimeOffset? CreatedUtc { get; set; }
     }
 }
-
-//ProfileID
-//UserId
-//FirstName
-//LastName
-//Birthday
-//Email
-//PhoneNumber
-//OtherInfo
-//MyTeams
-//Comment
-//CreatedUtc

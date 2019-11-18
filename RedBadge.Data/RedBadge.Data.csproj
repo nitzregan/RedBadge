@@ -54,7 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data Tables\Calendar.cs" />
     <Compile Include="Data Tables\Event.cs" />
     <Compile Include="Data Tables\Profile.cs" />
     <Compile Include="Data Tables\Team.cs" />

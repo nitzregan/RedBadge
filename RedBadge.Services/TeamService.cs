@@ -24,9 +24,9 @@ namespace RedBadge.Services
                 new Team()
                 {
                     UserID = _userID,
-                    CalendarID = model.CalendarID,
                     TeamName = model.TeamName,
                     Roster = model.Roster,
+                    TeamEvents = model.TeamEvents
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -50,6 +50,7 @@ namespace RedBadge.Services
                                 TeamID = e.TeamID,
                                 TeamName = e.TeamName,
                                 Roster = e.Roster,
+                                TeamEvents = e.TeamEvents
                             }
                         );
                 return query.ToArray();
@@ -70,6 +71,7 @@ namespace RedBadge.Services
                         TeamID = entity.TeamID,
                         TeamName = entity.TeamName,
                         Roster = entity.Roster,
+                        TeamEvents = entity.TeamEvents
                     };
             }
         }
@@ -86,6 +88,7 @@ namespace RedBadge.Services
                 entity.TeamID = model.TeamID;
                 entity.TeamName = model.TeamName;
                 entity.Roster = model.Roster;
+                entity.TeamEvents = model.TeamEvents;
 
                 return ctx.SaveChanges() == 1;
             }

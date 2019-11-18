@@ -10,9 +10,10 @@ namespace RedBadge.Models
 {
     public class ProfileDetail
     {
-        public int ProfileID { get; set; }
         [Required]
         public Guid UserID { get; set; }
+        [Key]
+        public int ProfileID { get; set; }
         [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
