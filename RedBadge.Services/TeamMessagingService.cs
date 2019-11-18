@@ -19,18 +19,18 @@ namespace RedBadge.Services
             _userID = userID;
         }
 
-        public bool CreateTeamMessaging(TeamMessagingCreate model)
-        {
-            Stream fs = model.File.InputStream;
-            BinaryReader br = new BinaryReader(fs);
-            byte[] bytes = br.ReadBytes((Int32)fs.Length);
+        //public bool CreateTeamMessaging(TeamMessagingCreate model)
+        //{
+        //    Stream fs = model.File.InputStream;
+        //    BinaryReader br = new BinaryReader(fs);
+        //    byte[] bytes = br.ReadBytes((Int32)fs.Length);
 
-            var entity =
-                new TeamMessaging()
-                {
-                    FileContent = bytes,
+        //    var entity =
+        //        new TeamMessaging()
+        //        {
+        //            FileContent = bytes,
                     
-                }
-        }
+        //        }
+        //}
     }
 }
