@@ -1,2 +1,0 @@
-C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadgeProject.API\obj\Debug\RedBadgeProject.API.csprojAssemblyReference.cache
-C:\Users\Regan\Desktop\dotnet\RedBadge\RedBadgeProject\RedBadgeProject.API\RedBadgeProject.API\obj\Debug\RedBadgeProject.API.csproj.CoreCompileInputs.cache
