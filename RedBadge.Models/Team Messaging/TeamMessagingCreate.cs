@@ -4,10 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace RedBadge.Models
 {
-    class TeamMessagingCreate
+    public class TeamMessagingCreate
     {   
        
         public int MessageID { get; set; }
@@ -15,10 +16,7 @@ namespace RedBadge.Models
         public string Title { get; set; }
         
         public string Content { get; set; }
-        [Display(Name = "File Name")]
-        public string FileName { get; set; }
-        [Display(Name = "File Content")]
-        public byte[] FileContent { get; set; }
+        public HttpPostedFileBase File { get; set; }
         [Display(Name = "Date Created")]
         public DateTimeOffset? CreatedUtc { get; set; }
         [Display(Name = "Date Modified")]
