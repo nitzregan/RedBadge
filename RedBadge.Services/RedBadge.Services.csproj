@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +70,10 @@
     <ProjectReference Include="..\RedBadge.Data\RedBadge.Data.csproj">
       <Project>{347CA885-2B2B-4C99-866D-CCA2CD0BAC24}</Project>
       <Name>RedBadge.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RedBadge.Models\RedBadge.Models.csproj">
+      <Project>{0a5d47c6-2195-4159-ae15-5831e608e027}</Project>
+      <Name>RedBadge.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
