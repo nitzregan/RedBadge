@@ -23,8 +23,8 @@ namespace RedBadge.Services
             var entity =
                 new Profile()
                 {
-                    ProfileID = model.ProfileID,
                     UserID = _userID,
+                    ProfileID = model.ProfileID,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     Birthday = model.Birthday,
@@ -54,8 +54,8 @@ namespace RedBadge.Services
                         .Single();
                 return new ProfileListItem
                 {
-                    ProfileID = query.ProfileID,
                     UserID = _userID,
+                    ProfileID = query.ProfileID,
                     FirstName = query.FirstName,
                     LastName = query.LastName,
                     Birthday = query.Birthday,
@@ -82,8 +82,8 @@ namespace RedBadge.Services
                             e =>
                                 new ProfileListItem
                                 {
-                                    ProfileID = e.ProfileID,
                                     UserID = _userID,
+                                    ProfileID = e.ProfileID,
                                     FirstName = e.FirstName,
                                     LastName = e.LastName,
                                     Birthday = e.Birthday,
@@ -108,8 +108,8 @@ namespace RedBadge.Services
                         .Profile
                         .Single(e => e.ProfileID == model.ProfileID && e.UserID == _userID);
 
-                entity.ProfileID = model.ProfileID;
                 entity.UserID = model.UserID;
+                entity.ProfileID = model.ProfileID;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 entity.Birthday = model.Birthday;

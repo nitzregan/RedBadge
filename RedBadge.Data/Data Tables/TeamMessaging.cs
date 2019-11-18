@@ -9,6 +9,8 @@ namespace RedBadge.Data
 {
     public class TeamMessaging
     {
+        [Required]
+        public Guid UserID { get; set; }
         [Key]
         public int MessageID { get; set; }
         public string Title { get; set; }
