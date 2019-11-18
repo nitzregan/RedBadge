@@ -7,15 +7,11 @@ using System.Threading.Tasks;
 
 namespace RedBadge.Models
 {
-    class TeamMessagingDetail
+    public class TeamMessagingDetail
     {
         public int MessageID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-
-        [Display(Name = "File Name")]
-        public string FileName { get; set; }
-
         [Display(Name = "File Content")]
         public byte[] FileContent { get; set; }
 
