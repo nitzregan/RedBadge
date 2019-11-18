@@ -51,6 +51,7 @@ namespace RedBadgeProject.API.Models
 
         [Required]
         public string Role { get; set; }
+        public string AthleteUsername { get; set; }
     }
 
     public class RegisterExternalBindingModel
