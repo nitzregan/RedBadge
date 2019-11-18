@@ -1,4 +1,5 @@
-﻿using RedBadgeProject.Data;
+﻿using RedBadge.Models;
+using RedBadgeProject.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RedBadge.Services
 {
-    class ProfileService
+    public class ProfileService
     {
         public bool CreateProfile(ProfileCreate model)
         {

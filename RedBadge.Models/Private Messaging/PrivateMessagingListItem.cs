@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RedBadge.Models
 {
-    class PrivateMessagingListItem
+    public class PrivateMessagingListItem
     {
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedBadge.Models
+namespace RedBadge.Data
 {
-    public class PrivateMessagingCreate
+    public class Calendar
     {
     }
 }

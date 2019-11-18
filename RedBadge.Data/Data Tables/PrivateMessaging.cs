@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RedBadge.Data
 {
-    class PrivateMessaging
+    public class PrivateMessaging
     {
-      //Newby to decide propereties based on endpoints required 
+        public string Comment { get; set; }
     }
 }

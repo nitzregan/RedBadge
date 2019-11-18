@@ -84,6 +84,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RedBadge.Data\RedBadge.Data.csproj">
+      <Project>{347CA885-2B2B-4C99-866D-CCA2CD0BAC24}</Project>
+      <Name>RedBadge.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
