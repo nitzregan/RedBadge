@@ -8,5 +8,6 @@ namespace RedBadge.Data
 {
     public class PrivateMessaging
     {
+        public string Comment { get; set; }
     }
 }
