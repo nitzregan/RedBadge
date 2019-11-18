@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using RedBadge.Data;
+
 //using Microsoft.AspNet.Identity.Owin;
 
 namespace RedBadgeProject.Data
@@ -40,6 +41,8 @@ namespace RedBadgeProject.Data
         public DbSet<Profile> Profile { get; set; }
         public DbSet<Team> Team { get; set; }
         public DbSet<TeamMessaging> TeamMessaging { get; set; }
+        public DbSet<Event> Event { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
