@@ -55,9 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalendarServices.cs" />
     <Compile Include="EventService.cs" />
-    <Compile Include="PrivateMessagingService.cs" />
     <Compile Include="ProfileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeamMessagingService.cs" />
