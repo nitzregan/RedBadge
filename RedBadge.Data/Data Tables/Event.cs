@@ -15,7 +15,6 @@ namespace RedBadge.Data.Data_Tables
         [Key]
         public int EventID { get; set; }
         [ForeignKey("TeamVariable") ]
-
         public int TeamID { get; set; }
         public virtual Team TeamVariable { get; set; }
         public string Title { get; set; }
