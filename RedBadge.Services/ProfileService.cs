@@ -23,8 +23,6 @@ namespace RedBadge.Services
             var entity =
                 new Profile()
                 {
-                    UserID = _userID,
-                    ProfileID = model.ProfileID,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     Birthday = model.Birthday,

@@ -9,7 +9,7 @@ using RedBadgeProject.Data;
 
 namespace RedBadge.Services
 {
-    class TeamService
+    public class TeamService
     {
         private readonly Guid _userID;
 
@@ -19,12 +19,10 @@ namespace RedBadge.Services
         }
 
         public bool CreateTeam(TeamCreate model)
-        { 
+        {
             var entity =
                 new Team()
                 {
-                    UserID = _userID,
-                    TeamID = model.TeamID,
                     TeamName = model.TeamName,
                     Roster = model.Roster,
                     TeamEvents = model.TeamEvents
@@ -36,7 +34,7 @@ namespace RedBadge.Services
             }
         }
 
-        public IEnumerable<TeamListItem> GetTeams()
+        public IEnumerable<TeamListItem> GetAllTeamsForCoachByUserID(Guid UserID)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -79,6 +77,30 @@ namespace RedBadge.Services
             }
         }
 
+        public IEnumerable<TeamListItem> GetAllTeamsForAthleteByUserID(Guid UserID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Profile
+                    .Where(e => e.UserID == _userID)
+                    .Single().MyTeams
+                    .Select(
+                        e =>
+                            new TeamListItem
+                            {
+                                UserID = _userID,
+                                TeamID = e.TeamID,
+                                TeamName = e.TeamName,
+                                Roster = e.Roster,
+                                TeamEvents = e.TeamEvents
+                            }
+                        );
+                return entity.ToArray();
+            }
+        }
+
         public bool UpdateTeam(TeamEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -88,7 +110,6 @@ namespace RedBadge.Services
                         .Team
                         .Single(e => e.TeamID == model.TeamID && e.UserID == _userID);
 
-                entity.TeamID = model.TeamID;
                 entity.TeamName = model.TeamName;
                 entity.Roster = model.Roster;
                 entity.TeamEvents = model.TeamEvents;
