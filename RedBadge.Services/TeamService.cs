@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using RedBadge.Data;
 using RedBadge.Models;
 using RedBadgeProject.Data;
+using RedBadge.Data.Data_Tables;
 
 
 namespace RedBadge.Services
@@ -14,15 +15,10 @@ namespace RedBadge.Services
     {
         private readonly Guid _userID;
 
-       public TeamService(Guid userID)
+        public TeamService(Guid userID)
         {
             _userID = userID;
         }
-
-
-
-      
-
 
         public bool CreateTeam(TeamCreate model)
         {
@@ -63,8 +59,8 @@ namespace RedBadge.Services
             }
         }
 
-      
-              public TeamDetail GetTeamById(int id)
+
+        public TeamDetail GetTeamById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {

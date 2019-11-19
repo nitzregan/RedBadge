@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using RedBadge.Data.Data_Tables;
 
 namespace RedBadgeProject.API.Controllers
 {
@@ -42,6 +43,17 @@ namespace RedBadgeProject.API.Controllers
             var service = CreateTeamService();
 
             if (!service.UpdateTeam(team))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+
+        public IHttpActionResult Delete(int TeamId)
+        {
+            var service = CreateTeamService();
+
+            if (!service.DeleteTeam(TeamId))
                 return InternalServerError();
 
             return Ok();
