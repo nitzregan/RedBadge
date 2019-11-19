@@ -7,16 +7,22 @@ using RedBadge.Data;
 using RedBadge.Models;
 using RedBadgeProject.Data;
 
+
 namespace RedBadge.Services
 {
     public class TeamService
     {
         private readonly Guid _userID;
 
-        public TeamService(Guid userID)
+       public TeamService(Guid userID)
         {
             _userID = userID;
         }
+
+
+
+      
+
 
         public bool CreateTeam(TeamCreate model)
         {
@@ -57,23 +63,31 @@ namespace RedBadge.Services
             }
         }
 
-        public TeamDetail GetTeamById(int id)
+      
+              public TeamDetail GetTeamById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                     .Team
-                    .Single(e => e.TeamID == id && e.UserID == _userID);
-                return
-                    new TeamDetail
-                    {
-                        UserID = _userID,
-                        TeamID = entity.TeamID,
-                        TeamName = entity.TeamName,
-                        Roster = entity.Roster,
-                        TeamEvents = entity.TeamEvents
-                    };
+                    .Single(e => e.TeamID == id);
+                if (entity.Roster.SingleOrDefault(e => e.UserID == _userID) != null)
+                {
+
+                    return
+                        new TeamDetail
+                        {
+                            TeamID = entity.TeamID,
+                            TeamName = entity.TeamName,
+                            Roster = entity.Roster,
+                            TeamEvents = entity.TeamEvents
+                        };
+                }
+                else
+                {
+                    return null;
+                };
             }
         }
 
@@ -113,7 +127,6 @@ namespace RedBadge.Services
                 entity.TeamName = model.TeamName;
                 entity.Roster = model.Roster;
                 entity.TeamEvents = model.TeamEvents;
-
                 return ctx.SaveChanges() == 1;
             }
         }
