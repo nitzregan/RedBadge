@@ -1,4 +1,6 @@
 ﻿using RedBadge.Data.Data_Tables;
+using RedBadge.Data;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
