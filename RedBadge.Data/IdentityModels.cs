@@ -37,8 +37,6 @@ namespace RedBadgeProject.Data
         }
 
 
-        
-        
         public DbSet<Profile> Profile { get; set; }
         public DbSet<Team> Team { get; set; }
         public DbSet<TeamMessaging> TeamMessaging { get; set; }
