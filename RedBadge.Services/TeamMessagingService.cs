@@ -10,7 +10,7 @@ using RedBadgeProject.Data;
 
 namespace RedBadge.Services
 {
-    class TeamMessagingService
+    public class TeamMessagingService
     {
         private readonly Guid _userID;
 
