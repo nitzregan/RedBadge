@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,18 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calendar\CalendarCreate.cs" />
-    <Compile Include="Calendar\CalendarDetail.cs" />
-    <Compile Include="Calendar\CalendarEdit.cs" />
-    <Compile Include="Calendar\CalendarListItem.cs" />
     <Compile Include="Event\EventCreate.cs" />
     <Compile Include="Event\EventDelete.cs" />
     <Compile Include="Event\EventDetail.cs" />
     <Compile Include="Event\EventEdit.cs" />
-    <Compile Include="Private Messaging\PrivateMessagingCreate.cs" />
-    <Compile Include="Private Messaging\PrivateMessagingDetail.cs" />
-    <Compile Include="Private Messaging\PrivateMessagingEdit.cs" />
-    <Compile Include="Private Messaging\PrivateMessagingListItem.cs" />
     <Compile Include="Profile\ProfileCreate.cs" />
     <Compile Include="Profile\ProfileDetail.cs" />
     <Compile Include="Profile\ProfileEdit.cs" />

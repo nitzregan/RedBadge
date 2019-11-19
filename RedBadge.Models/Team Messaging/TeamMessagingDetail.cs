@@ -7,22 +7,17 @@ using System.Threading.Tasks;
 
 namespace RedBadge.Models
 {
-    class TeamMessagingDetail
+    public class TeamMessagingDetail
     {
+        [Required]
+        public Guid UserID { get; set; }
+        [Key]
         public int MessageID { get; set; }
+        public int TeamID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-
-        [Display(Name = "File Name")]
-        public string FileName { get; set; }
-
-        [Display(Name = "File Content")]
         public byte[] FileContent { get; set; }
-
-        [Display(Name = "Date Created")]
         public DateTimeOffset? CreatedUtc { get; set; }
-
-        [Display(Name = "Date Modified")]
         public DateTimeOffset? Modifiedutc { get; set; }
     }
 }

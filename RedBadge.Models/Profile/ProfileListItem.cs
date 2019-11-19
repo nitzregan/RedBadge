@@ -10,19 +10,22 @@ namespace RedBadge.Models
 {
     public class ProfileListItem
     {
-        public int ProfileID { get; set; }
         [Required]
-        public Guid UserId { get; set; }
+        public Guid UserID { get; set; }
+        [Key]
+        public int ProfileID { get; set; }
         [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
         [Required]
         [Display(Name = "Late Name")]
         public string LastName { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string OtherInfo { get; set; }
         public ICollection<Team> MyTeams { get; set; }
+        public string Comment { get; set; }
+        public DateTimeOffset? CreatedUtc { get; set; }
     }
 }

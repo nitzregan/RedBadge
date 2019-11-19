@@ -5,6 +5,9 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using RedBadge.Data;
+using RedBadge.Data.Data_Tables;
+
 //using Microsoft.AspNet.Identity.Owin;
 
 namespace RedBadgeProject.Data
@@ -33,11 +36,12 @@ namespace RedBadgeProject.Data
             return new ApplicationDbContext();
         }
 
-        //public DbSet<Calendar> Calendar { get; set; }
-        //public DbSet<PrivateMessaging> PrivateMessaging { get; set; }
-        //public DbSet<Profile> Profile { get; set; }
-        //public DbSet<Team> Team { get; set; }
-        //public DbSet<TeamMessaging> TeamMessaging { get; set; }
+
+        public DbSet<Profile> Profile { get; set; }
+        public DbSet<Team> Team { get; set; }
+        public DbSet<TeamMessaging> TeamMessaging { get; set; }
+        public DbSet<Event> Event { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

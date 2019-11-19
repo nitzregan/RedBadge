@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,8 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalendarServices.cs" />
-    <Compile Include="PrivateMessagingService.cs" />
+    <Compile Include="EventService.cs" />
     <Compile Include="ProfileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeamMessagingService.cs" />
@@ -69,6 +69,10 @@
     <ProjectReference Include="..\RedBadge.Data\RedBadge.Data.csproj">
       <Project>{347CA885-2B2B-4C99-866D-CCA2CD0BAC24}</Project>
       <Name>RedBadge.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RedBadge.Models\RedBadge.Models.csproj">
+      <Project>{0A5D47C6-2195-4159-AE15-5831E608E027}</Project>
+      <Name>RedBadge.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
