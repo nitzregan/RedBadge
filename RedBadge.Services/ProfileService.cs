@@ -23,8 +23,6 @@ namespace RedBadge.Services
             var entity =
                 new Profile()
                 {
-                    UserID = _userID,
-                    ProfileID = model.ProfileID,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     Birthday = model.Birthday,
@@ -108,8 +106,6 @@ namespace RedBadge.Services
                         .Profile
                         .Single(e => e.ProfileID == model.ProfileID && e.UserID == _userID);
 
-                entity.UserID = model.UserID;
-                entity.ProfileID = model.ProfileID;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 entity.Birthday = model.Birthday;
@@ -118,7 +114,6 @@ namespace RedBadge.Services
                 entity.OtherInfo = model.OtherInfo;
                 entity.MyTeams = model.MyTeams;
                 entity.Comment = model.Comment;
-                entity.CreatedUtc = model.CreatedUtc;
 
                 return ctx.SaveChanges() == 1;
             }

@@ -5,19 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedBadge.Models
+namespace RedBadge.Models.Event
 {
-    public class TeamMessagingDetail
+    public class EventListItem
     {
         [Required]
         public Guid UserID { get; set; }
         [Key]
-        public int MessageID { get; set; }
+        public int EventID { get; set; }
         public int TeamID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public byte[] FileContent { get; set; }
-        public DateTimeOffset? CreatedUtc { get; set; }
-        public DateTimeOffset? Modifiedutc { get; set; }
+        public bool AllDayEvent { get; set; }
+        public DateTimeOffset Start { get; set; }
+        public DateTimeOffset End { get; set; }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using RedBadge.Data;
+using RedBadge.Data.Data_Tables;
 
 //using Microsoft.AspNet.Identity.Owin;
 
@@ -36,8 +37,6 @@ namespace RedBadgeProject.Data
         }
 
 
-        public DbSet<Calendar> Calendar { get; set; }
-        public DbSet<PrivateMessaging> PrivateMessaging { get; set; }
         public DbSet<Profile> Profile { get; set; }
         public DbSet<Team> Team { get; set; }
         public DbSet<TeamMessaging> TeamMessaging { get; set; }

@@ -7,23 +7,28 @@ using RedBadge.Data;
 using RedBadge.Models;
 using RedBadgeProject.Data;
 
+
 namespace RedBadge.Services
 {
-    class TeamService
+    public class TeamService
     {
         private readonly Guid _userID;
 
-        public TeamService(Guid userID)
+       public TeamService(Guid userID)
         {
             _userID = userID;
         }
 
+
+
+      
+
+
         public bool CreateTeam(TeamCreate model)
-        { 
+        {
             var entity =
                 new Team()
                 {
-                    UserID = _userID,
                     TeamName = model.TeamName,
                     Roster = model.Roster,
                     TeamEvents = model.TeamEvents
@@ -35,7 +40,7 @@ namespace RedBadge.Services
             }
         }
 
-        public IEnumerable<TeamListItem> GetTeams()
+        public IEnumerable<TeamListItem> GetAllTeamsForCoachByUserID(Guid UserID)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -47,6 +52,7 @@ namespace RedBadge.Services
                         e =>
                             new TeamListItem
                             {
+                                UserID = _userID,
                                 TeamID = e.TeamID,
                                 TeamName = e.TeamName,
                                 Roster = e.Roster,
@@ -57,22 +63,55 @@ namespace RedBadge.Services
             }
         }
 
-        public TeamDetail GetTeamById(int id)
+      
+              public TeamDetail GetTeamById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                     .Team
-                    .Single(e => e.TeamID == id && e.UserID == _userID);
-                return
-                    new TeamDetail
-                    {
-                        TeamID = entity.TeamID,
-                        TeamName = entity.TeamName,
-                        Roster = entity.Roster,
-                        TeamEvents = entity.TeamEvents
-                    };
+                    .Single(e => e.TeamID == id);
+                if (entity.Roster.SingleOrDefault(e => e.UserID == _userID) != null)
+                {
+
+                    return
+                        new TeamDetail
+                        {
+                            TeamID = entity.TeamID,
+                            TeamName = entity.TeamName,
+                            Roster = entity.Roster,
+                            TeamEvents = entity.TeamEvents
+                        };
+                }
+                else
+                {
+                    return null;
+                };
+            }
+        }
+
+        public IEnumerable<TeamListItem> GetAllTeamsForAthleteByUserID(Guid UserID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Profile
+                    .Where(e => e.UserID == _userID)
+                    .Single().MyTeams
+                    .Select(
+                        e =>
+                            new TeamListItem
+                            {
+                                UserID = _userID,
+                                TeamID = e.TeamID,
+                                TeamName = e.TeamName,
+                                Roster = e.Roster,
+                                TeamEvents = e.TeamEvents
+                            }
+                        );
+                return entity.ToArray();
             }
         }
 
@@ -85,11 +124,9 @@ namespace RedBadge.Services
                         .Team
                         .Single(e => e.TeamID == model.TeamID && e.UserID == _userID);
 
-                entity.TeamID = model.TeamID;
                 entity.TeamName = model.TeamName;
                 entity.Roster = model.Roster;
                 entity.TeamEvents = model.TeamEvents;
-
                 return ctx.SaveChanges() == 1;
             }
         }
